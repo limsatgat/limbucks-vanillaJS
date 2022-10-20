@@ -18,3 +18,17 @@
 // []  메뉴 삭제시 브라우저에서 제공하는 confirm 인터페이스를 활용한다.
 // []  확인 버튼을 누르면 메뉴를 삭제된다.
 // []  총 메뉴 갯수를 count하여 상단에 보여준다.
+
+function App() {
+    // form 태그 이벤트 막기
+
+    // 메뉴의 이름을 입력받기
+    document.querySelector("#espresso-menu-name").addEventListener("keypress",(e) => {
+        console.log(e.key);
+        if(e.key === 'Enter'){
+            console.log(document.querySelector("espresso-menu-name").value);
+        }
+    });
+}
+
+App();
